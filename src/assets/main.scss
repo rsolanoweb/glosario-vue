@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$white: #fff;
+$blue: #4285f4;
+$brown: #757763;
+$beige-light: #d0d1cd;
+$beige-lighter: #eff0eb;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Nunito', sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $blue;
+$link: $blue;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: #e5e8f0;
+$control-border-width: 1px;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import '~bulma/bulma';
+
+/* Extra */
+
+.navbar-tabs {
+  top: -72.38px !important;
+  box-shadow: none;
+
+  .tabs {
+    width: 100%;
+    padding: 1rem 0;
+  }
+}
+
+.navbar-tabs-active {
+  animation: .5s showNavbar forwards;
+}
+
+@keyframes showNavbar {
+  from {
+    top: -72.38px;
+    box-shadow: rgba(69, 75, 92, 0) 0 0 0 0;
+  }
+  to {
+    top: 0;
+    box-shadow: rgba(69, 75, 92, 0.3) 0px -2px 24px 0px;
+  }
+}
+
+.navbar-tabs-hide {
+  animation: .5s hideNavbar forwards;
+}
+
+@keyframes hideNavbar {
+  from {
+    top: 0;
+    box-shadow: rgba(69, 75, 92, 0.3) 0px -2px 24px 0px;
+  }
+  to {
+    top: -72.38px;
+    box-shadow: rgba(69, 75, 92, 0) 0 0 0 0;
+  }
+}
+
+.body-content {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  hr {
+    margin: 2.5rem 0 !important;
+  }
+
+  .title.is-3 {
+    text-align: left !important;
+  }
+}
